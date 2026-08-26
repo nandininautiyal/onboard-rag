@@ -1,0 +1,230 @@
+[
+  {
+    "question": "How many days of paid time off (PTO) do full-time Techify employees receive per year?",
+    "expected_answer": "18 days of PTO per calendar year, accrued monthly.",
+    "source_doc_id": "hr_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "How much notice is required for an extended leave request of 5 or more consecutive days?",
+    "expected_answer": "15 days' notice to your manager and People Ops.",
+    "source_doc_id": "hr_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "Which days are in-office under Techify's hybrid work policy?",
+    "expected_answer": "Tuesday, Wednesday, and Thursday are in-office; Monday and Friday are remote.",
+    "source_doc_id": "hr_wfh_hybrid_policy",
+    "answerable": true
+  },
+  {
+    "question": "How many times per month can an employee work remotely on a normally in-office day without formal approval?",
+    "expected_answer": "Up to 4 times per month, with advance notice to their manager via Slack.",
+    "source_doc_id": "hr_wfh_hybrid_policy",
+    "answerable": true
+  },
+  {
+    "question": "Within how many business days are Code of Conduct reports investigated?",
+    "expected_answer": "Within 5 business days of submission.",
+    "source_doc_id": "hr_code_of_conduct",
+    "answerable": true
+  },
+  {
+    "question": "How many weeks of paid parental leave does a primary caregiver receive at Techify?",
+    "expected_answer": "16 weeks of fully paid parental leave.",
+    "source_doc_id": "hr_parental_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "How many weeks of paid parental leave does a secondary caregiver receive?",
+    "expected_answer": "6 weeks of fully paid parental leave.",
+    "source_doc_id": "hr_parental_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "What is the default laptop issued to new Techify hires?",
+    "expected_answer": "A MacBook Pro (14-inch, M-series).",
+    "source_doc_id": "it_device_setup",
+    "answerable": true
+  },
+  {
+    "question": "Within how many days of a new hire's start date is initial device setup completed?",
+    "expected_answer": "Within the first 2 days.",
+    "source_doc_id": "it_device_setup",
+    "answerable": true
+  },
+  {
+    "question": "What is the minimum required password length for Techify accounts?",
+    "expected_answer": "At least 12 characters.",
+    "source_doc_id": "it_password_policy",
+    "answerable": true
+  },
+  {
+    "question": "How often must Techify employees rotate their account passwords?",
+    "expected_answer": "Every 90 days.",
+    "source_doc_id": "it_password_policy",
+    "answerable": true
+  },
+  {
+    "question": "Within how many hours must a suspected data security incident be reported to IT Security?",
+    "expected_answer": "Within 24 hours of discovery.",
+    "source_doc_id": "it_data_security_policy",
+    "answerable": true
+  },
+  {
+    "question": "How many approving reviews are required for a standard pull request at Techify, and how many for auth or billing code?",
+    "expected_answer": "At least 1 approval for standard PRs; 2 approvals (including one from the relevant CODEOWNERS group) for PRs touching authentication, billing, or payment-processing code.",
+    "source_doc_id": "eng_repo_branching_strategy",
+    "answerable": true
+  },
+  {
+    "question": "What is the recommended maximum size, in lines of diff, for a pull request at Techify?",
+    "expected_answer": "Under 400 lines of diff where possible.",
+    "source_doc_id": "eng_code_review_guidelines",
+    "answerable": true
+  },
+  {
+    "question": "On which two days of the week does Techify normally release to production?",
+    "expected_answer": "Tuesday and Thursday.",
+    "source_doc_id": "eng_deployment_release_process",
+    "answerable": true
+  },
+  {
+    "question": "If error rates spike more than 2x baseline after a deploy, how quickly should the on-call engineer roll back?",
+    "expected_answer": "Within 15 minutes, using the one-click rollback in the deploy bot.",
+    "source_doc_id": "eng_deployment_release_process",
+    "answerable": true
+  },
+  {
+    "question": "What tool is used to manage Techify's on-call rotation and paging?",
+    "expected_answer": "PagerDuty.",
+    "source_doc_id": "eng_oncall_rotation_policy",
+    "answerable": true
+  },
+  {
+    "question": "By when should a new AE lead their first live customer call solo, according to the sales onboarding checklist?",
+    "expected_answer": "Typically by day 30 for AEs closing deals (day 14 for SDRs handling outbound).",
+    "source_doc_id": "sales_onboarding_checklist",
+    "answerable": true
+  },
+  {
+    "question": "What is the required minimum quiz score for the Techify product certification during sales onboarding?",
+    "expected_answer": "85% or higher.",
+    "source_doc_id": "sales_onboarding_checklist",
+    "answerable": true
+  },
+  {
+    "question": "Within how many hours must a sales rep update a Salesforce opportunity stage after a call or major status change?",
+    "expected_answer": "Within 24 hours.",
+    "source_doc_id": "sales_crm_usage_guide",
+    "answerable": true
+  },
+  {
+    "question": "What is the SDR response time SLA for new inbound leads?",
+    "expected_answer": "1 business hour during business hours.",
+    "source_doc_id": "sales_crm_usage_guide",
+    "answerable": true
+  },
+  {
+    "question": "Within how many business hours must a CSM escalate a Sev 1 customer issue to the CSM Lead?",
+    "expected_answer": "Within 2 business hours of the customer report.",
+    "source_doc_id": "sales_customer_escalation_process",
+    "answerable": true
+  },
+  {
+    "question": "How far before general availability (GA) is the Launch Readiness Review held for Tier 1 and Tier 2 launches?",
+    "expected_answer": "2 weeks before GA.",
+    "source_doc_id": "marketing_product_launch_process",
+    "answerable": true
+  },
+  {
+    "question": "Within how many days must expenses be submitted in Concur after being incurred?",
+    "expected_answer": "Within 30 days.",
+    "source_doc_id": "finance_expense_reimbursement_policy",
+    "answerable": true
+  },
+  {
+    "question": "Above what dollar amount is a receipt required for an expense at Techify?",
+    "expected_answer": "Over $25.",
+    "source_doc_id": "finance_expense_reimbursement_policy",
+    "answerable": true
+  },
+  {
+    "question": "How often does Techify run payroll, and on what day does pay land?",
+    "expected_answer": "Bi-weekly, with pay day every other Friday.",
+    "source_doc_id": "finance_payroll_faq",
+    "answerable": true
+  },
+  {
+    "question": "What is Techify's daily meal per diem for domestic business travel?",
+    "expected_answer": "$60 per day in the US.",
+    "source_doc_id": "finance_travel_accommodation_policy",
+    "answerable": true
+  },
+  {
+    "question": "Above what estimated total trip cost does business travel require manager approval before booking?",
+    "expected_answer": "Trips over $1,500 in estimated total cost.",
+    "source_doc_id": "finance_travel_accommodation_policy",
+    "answerable": true
+  },
+  {
+    "question": "How many paid company holidays does Techify observe per year?",
+    "expected_answer": "11 paid company holidays.",
+    "source_doc_id": "general_benefits_holidays_faq",
+    "answerable": true
+  },
+  {
+    "question": "In what year was Techify founded, and roughly how many employees does it have?",
+    "expected_answer": "Founded in 2016, with approximately 600 employees.",
+    "source_doc_id": "org_chart_overview",
+    "answerable": true
+  },
+  {
+    "question": "Which CRM do new sales hires use, and within how many hours must they log an opportunity update after a call?",
+    "expected_answer": "Salesforce is the CRM; opportunity stages must be updated within 24 hours of a call or major status change.",
+    "source_doc_id": "sales_onboarding_checklist,sales_crm_usage_guide",
+    "answerable": true
+  },
+  {
+    "question": "Which tool pages the on-call engineer during a Tuesday or Thursday production release if monitoring alerts fire?",
+    "expected_answer": "PagerDuty, per the on-call rotation used during the release process.",
+    "source_doc_id": "eng_deployment_release_process,eng_oncall_rotation_policy",
+    "answerable": true
+  },
+  {
+    "question": "Which tool should an employee use to book a client-visit trip, and within how many business days will their travel expenses be reimbursed once approved?",
+    "expected_answer": "Concur Travel for booking; expenses are reimbursed within 10 business days of full approval.",
+    "source_doc_id": "finance_travel_accommodation_policy,finance_expense_reimbursement_policy",
+    "answerable": true
+  },
+  {
+    "question": "Combining paid holidays and annual PTO, how many total paid days off does a Techify employee get in a year (excluding sick leave)?",
+    "expected_answer": "29 days total: 11 paid company holidays plus 18 days of PTO.",
+    "source_doc_id": "general_benefits_holidays_faq,hr_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "What is Techify's current stock ticker symbol?",
+    "expected_answer": "Not answerable from provided documents",
+    "source_doc_id": "",
+    "answerable": false
+  },
+  {
+    "question": "How many paid vacation days do part-time contractors receive at Techify?",
+    "expected_answer": "Not answerable from provided documents",
+    "source_doc_id": "",
+    "answerable": false
+  },
+  {
+    "question": "Who is Techify's current CEO?",
+    "expected_answer": "Not answerable from provided documents",
+    "source_doc_id": "",
+    "answerable": false
+  },
+  {
+    "question": "What is the exact dollar amount of Techify's employee referral bonus?",
+    "expected_answer": "Not answerable from provided documents",
+    "source_doc_id": "",
+    "answerable": false
+  }
+]

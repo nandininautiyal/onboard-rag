@@ -1,0 +1,1014 @@
+===DOC_START===
+DOC_ID: hr_leave_policy
+TITLE: Paid Time Off & Extended Leave Policy
+DEPARTMENT: HR
+DOC_TYPE: policy
+LAST_UPDATED: 2025-11-03
+ACCESS_ROLE: all
+---
+## Overview
+Techify provides all full-time employees with 18 days of paid time off (PTO) per calendar year, accrued monthly starting from your first day. PTO is separate from the 11 company-wide paid holidays (see the Benefits & Holidays FAQ) and from sick leave.
+
+## Sick Leave
+Employees receive 10 days of paid sick leave annually, which does not roll over year to year and is tracked separately from PTO in Workday.
+
+## Requesting Time Off
+- Standard PTO (1–4 consecutive days): submit in Workday at least 3 business days in advance.
+- Extended leave (5+ consecutive days): requires **15 days' notice** to your manager and People Ops, submitted through the Extended Leave Request form in Workday.
+- Manager approval is required for all leave requests regardless of duration.
+
+## Carryover
+Up to 5 unused PTO days may be carried over into the following calendar year. Any PTO beyond that cap is forfeited on December 31st unless local law requires otherwise.
+
+## Unlimited PTO Exception
+Techify does not currently offer unlimited PTO. This has been proposed twice in engineering town halls but has not been adopted company-wide as of this writing.
+
+## Manager Responsibilities
+Managers should respond to PTO requests within 2 business days and should not deny standard PTO requests without documented business justification, escalated to their Director if needed.
+
+## Questions
+Reach out to People Ops via the #ask-peopleops Slack channel or peopleops@techify.io for anything not covered here, including questions about PTO payout upon termination.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: hr_wfh_hybrid_policy
+TITLE: Hybrid Work & Remote Policy
+DEPARTMENT: HR
+DOC_TYPE: policy
+LAST_UPDATED: 2025-09-15
+ACCESS_ROLE: all
+---
+## Hybrid Schedule
+Techify operates on a hybrid model. All employees based within commuting distance of an office (San Jose HQ, Austin, or Krakow) are expected to work **in-office Tuesday, Wednesday, and Thursday**, with Monday and Friday available as remote days.
+
+## Core Hours
+Regardless of location, all employees should be reachable and online during core hours of **10:00 AM–4:00 PM local office time** to support cross-team collaboration and meetings.
+
+## Fully Remote Roles
+Some roles (e.g., certain Customer Success and Engineering positions filled outside commuting radius of an office) are designated fully remote at the time of offer. This designation is noted in the offer letter and cannot be changed unilaterally by the employee after starting.
+
+## Temporary Remote Work
+Employees may work remotely on a normally in-office day up to 4 times per month for personal reasons (appointments, travel, etc.) without formal approval, but should notify their manager in advance via Slack.
+
+## Equipment for Remote Work
+Home office equipment (monitor, keyboard, chair) can be requested through the IT device request process, up to a $400 one-time stipend per employee.
+
+## Office Access
+Badge access to office buildings is provisioned automatically for hybrid and in-office employees before their start date; see the New Hire FAQ for details.
+
+## Policy Review
+This policy is reviewed annually by People Ops and Department Heads and was last formally ratified in September 2025.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: hr_code_of_conduct
+TITLE: Employee Code of Conduct
+DEPARTMENT: HR
+DOC_TYPE: policy
+LAST_UPDATED: 2025-06-01
+ACCESS_ROLE: all
+---
+## Our Commitment
+Techify is committed to maintaining a respectful, inclusive, and safe workplace for all 600+ employees across our offices and remote locations. This Code of Conduct applies to all interactions, including Slack, email, video calls, and in-person settings.
+
+## Expected Behavior
+- Treat colleagues, customers, and partners with respect regardless of role, seniority, or department.
+- Give and receive feedback professionally, especially during code review and design critique sessions.
+- Disclose conflicts of interest (e.g., hiring or managing a family member) to People Ops before they arise where possible.
+
+## Zero-Tolerance Harassment Policy
+Techify maintains a zero-tolerance policy toward harassment, discrimination, or retaliation of any kind. This includes but is not limited to comments or conduct based on race, gender, religion, disability, or sexual orientation.
+
+## Reporting
+Concerns can be reported through any of the following channels:
+- Directly to your manager or their manager
+- People Ops (peopleops@techify.io)
+- The anonymous Ethics Hotline (linked in the #hr-resources Slack channel), available 24/7
+
+All reports are investigated within **5 business days** of submission, and retaliation against anyone who reports in good faith is grounds for termination.
+
+## Acknowledgment
+All employees must complete the Code of Conduct training and sign an acknowledgment annually during their anniversary month, tracked via the Learning Management System (Lessonly).
+
+## Consequences
+Violations may result in coaching, formal warnings, or termination depending on severity, at the discretion of People Ops and department leadership.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: hr_parental_leave_policy
+TITLE: Parental Leave Policy
+DEPARTMENT: HR
+DOC_TYPE: policy
+LAST_UPDATED: 2025-08-20
+ACCESS_ROLE: all
+---
+## Eligibility
+All full-time employees are eligible for paid parental leave after 90 days of continuous employment, regardless of gender or family structure.
+
+## Leave Duration
+- **Primary caregivers** receive 16 weeks of fully paid parental leave.
+- **Secondary caregivers** receive 6 weeks of fully paid parental leave.
+- Leave must be taken within 12 months of the birth, adoption, or foster placement date, and can be split into two blocks with People Ops approval.
+
+## Notice
+Employees should notify their manager and People Ops at least 30 days in advance when the leave is foreseeable (e.g., a due date), though Techify recognizes this isn't always possible for adoption or foster placements.
+
+## Pay & Benefits During Leave
+Parental leave is paid at 100% of base salary and does not draw from the standard 18-day PTO bank described in the PTO policy. Health benefits continue uninterrupted during leave.
+
+## Returning to Work
+Employees may request a gradual return (e.g., part-time for the first 2 weeks back) by working with their manager and People Ops; this is evaluated case by case and is not guaranteed.
+
+## Job Protection
+Employees returning from parental leave are guaranteed their same or an equivalent role, consistent with applicable federal and state law.
+
+## Contact
+Questions about parental leave, including how it interacts with short-term disability in states where applicable, should go to peopleops@techify.io.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: it_device_setup
+TITLE: Laptop & Device Setup Guide
+DEPARTMENT: IT
+DOC_TYPE: guide
+LAST_UPDATED: 2025-10-10
+ACCESS_ROLE: all
+---
+## Default Hardware
+New hires are issued a MacBook Pro (14", M-series) by default. Employees needing a Windows machine (common for certain Sales Engineering and QA roles) can request one via an IT ticket, subject to manager approval.
+
+## Setup Timeline
+IT ships or hands off devices so they arrive **before your start date**, and initial setup (OS provisioning, MDM enrollment, account creation) is completed within your **first 2 days**.
+
+## Required Software (Pre-installed)
+- Okta (SSO login for all internal tools)
+- Slack, Zoom, Google Workspace
+- 1Password (company password manager)
+- TechifyConnect VPN client (see VPN & Access Management guide)
+
+## Mobile Device Management
+All laptops are enrolled in Jamf MDM, which enforces disk encryption, screen lock after 5 minutes of inactivity, and automatic security patching.
+
+## Requesting Additional Hardware
+Monitors, keyboards, docking stations, and home office equipment can be requested through the IT Help Desk portal (help.techify.io). Standard requests are fulfilled within 5 business days; the home office stipend cap is $400 as described in the Hybrid Work Policy.
+
+## Loss or Damage
+Report a lost or stolen device to IT Security **immediately** (within 1 hour if possible) so it can be remotely wiped. Report to #it-help in Slack or emergency line for after-hours incidents.
+
+## Offboarding
+Devices must be returned to IT within 5 business days of an employee's last day; remote employees are sent a prepaid shipping label.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: it_vpn_access
+TITLE: VPN & Access Management Guide
+DEPARTMENT: IT
+DOC_TYPE: guide
+LAST_UPDATED: 2025-04-18
+ACCESS_ROLE: all
+---
+## VPN Overview
+All remote connections to internal Techify systems (internal wikis, staging environments, internal admin tools) must go through the company VPN, GlobalProtect. Do not access internal systems over public Wi-Fi without connecting first.
+
+## Requesting Access
+New employees receive VPN access automatically as part of onboarding, provisioned within 1 business day of their start date. Contractors and vendors need a manager to submit an Access Request ticket, which is typically reviewed within 2–3 business days depending on the system.
+
+## Multi-Factor Authentication
+MFA (via Okta Verify) is required for VPN and for all internal tools handling customer data. Employees should not disable MFA prompts or share device push approvals with anyone.
+
+## Note on Client Version
+We're in the process of migrating VPN clients — most employees should now be using TechifyConnect, our rebranded VPN client, though some older devices may still show it as GlobalProtect in the app switcher during the transition. If you're not sure which one you have, check with #it-help.
+
+## Access Reviews
+System access (Salesforce, AWS, internal admin panels) is reviewed quarterly by IT Security in partnership with department managers. Access not used in 90 days may be automatically revoked and must be re-requested.
+
+## Least Privilege
+Access requests should specify the minimum systems needed for the role. Broad "give me access to everything" requests will be pushed back to the requester's manager for scoping.
+
+## Offboarding Access Removal
+All system access, including VPN, is revoked within 4 hours of an employee's official termination timestamp in Workday.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: it_password_policy
+TITLE: Password & Authentication Policy
+DEPARTMENT: IT
+DOC_TYPE: policy
+LAST_UPDATED: 2025-07-22
+ACCESS_ROLE: all
+---
+## Password Requirements
+All Techify accounts (Okta SSO, email, internal tools) must use passwords that are:
+- At least **12 characters** long
+- A mix of upper/lowercase letters, numbers, and symbols
+- Not reused across the last 10 passwords
+
+## Rotation
+Passwords must be rotated every **90 days**. Okta will prompt users automatically 7 days before expiration.
+
+## Password Manager
+All employees are provisioned a 1Password account as part of device setup. Storing shared credentials (e.g., for shared marketing or social media accounts) outside of 1Password's shared vaults is prohibited.
+
+## Multi-Factor Authentication
+MFA via Okta Verify is mandatory for all accounts, with no exceptions for convenience. SMS-based MFA is discouraged in favor of push notifications or hardware keys (YubiKey, available on request from IT).
+
+## Shared Accounts
+Shared or generic logins (e.g., a shared support@ inbox) are discouraged; where unavoidable, they must be stored in a 1Password shared vault with access logged.
+
+## Suspected Compromise
+If you suspect your password or account has been compromised, reset it immediately via Okta and notify #it-help within 1 hour. IT Security will review login activity and may force a global session logout.
+
+## Enforcement
+Repeated failure to comply with password rotation requirements after 2 reminders will result in automatic account lockout until the password is updated.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: it_data_security_policy
+TITLE: Data Security & Classification Policy
+DEPARTMENT: IT
+DOC_TYPE: policy
+LAST_UPDATED: 2025-05-12
+ACCESS_ROLE: all
+---
+## Data Classification
+Techify classifies data into three tiers:
+- **Public** — marketing materials, public documentation
+- **Internal** — internal wikis, roadmaps, org charts
+- **Confidential** — customer data, financial records, employee PII, source code
+
+## Handling Confidential Data
+Confidential data must be encrypted both at rest (AES-256) and in transit (TLS 1.2+). It may not be copied to personal devices, personal cloud storage (Dropbox, personal Google Drive), or USB drives.
+
+## Access Principle
+Access to Confidential data follows the principle of least privilege and is granted based on role, reviewed quarterly alongside the process described in the VPN & Access Management guide.
+
+## Customer Data
+Customer data lives in our production AWS environment and designated Salesforce fields. Engineers accessing production customer data for debugging must use the audited "break-glass" process and log the reason in the #eng-breakglass channel.
+
+## Incident Reporting
+Any suspected data security incident (leaked credentials, phishing click, lost device with Confidential data, suspicious account activity) must be reported to IT Security within **24 hours** of discovery via security@techify.io or #it-security-urgent.
+
+## Third-Party Tools
+New SaaS tools that will store or process Confidential data require a security review before purchase, coordinated with IT Security and Finance (see Procurement section of the Travel & Accommodation policy's related Finance docs).
+
+## Annual Training
+All employees complete an annual data security training module in Lessonly, and Engineering additionally completes a secure coding refresher tied to the code review process.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: eng_repo_branching_strategy
+TITLE: Repository Structure & Branching Strategy
+DEPARTMENT: Engineering
+DOC_TYPE: guide
+LAST_UPDATED: 2025-10-01
+ACCESS_ROLE: engineering
+---
+## Repo Structure
+Techify's core product lives across three main GitHub repos: `techify-web` (frontend), `techify-api` (backend services), and `techify-infra` (Terraform/IaC). Smaller internal tools live in individually named repos under the `techify-labs` GitHub org.
+
+## Branching Model
+We use a trunk-based-ish model:
+- `main` is always deployable and is protected — no direct pushes.
+- Feature work happens on short-lived branches named `feat/<ticket-id>-short-desc` or `fix/<ticket-id>-short-desc`.
+- Branches should be merged or closed within **5 business days** to avoid drift; stale branches older than 30 days are auto-flagged by a weekly bot.
+
+## Merging
+All merges to `main` happen via Pull Request, never direct push, enforced by branch protection rules. Squash-merge is the default merge strategy to keep history clean.
+
+## Approvals Required
+Standard PRs require **at least 1 approving review** before merge. PRs touching authentication, billing, or payment-processing code require **2 approvals**, at least one from a senior engineer on that codeowners list.
+
+## Release Branches
+For rare hotfixes to a previous release, a `release/x.y` branch may be cut from a tagged commit; this is uncommon since most deploys ship straight from `main` (see Deployment & Release Process).
+
+## CODEOWNERS
+Each repo has a `CODEOWNERS` file mapping directories to responsible teams, which GitHub uses to auto-request reviewers on PRs touching those paths.
+
+## Commit Messages
+We loosely follow Conventional Commits (`feat:`, `fix:`, `chore:`) to support auto-generated changelogs, though this isn't strictly enforced by CI today.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: eng_code_review_guidelines
+TITLE: Code Review Guidelines
+DEPARTMENT: Engineering
+DOC_TYPE: guide
+LAST_UPDATED: 2025-09-05
+ACCESS_ROLE: engineering
+---
+## Why We Review
+Code review at Techify is about catching bugs early, spreading knowledge, and maintaining consistency — not gatekeeping. Reviews should be constructive and specific.
+
+## PR Size
+Aim to keep pull requests **under 400 lines of diff** where possible. Larger PRs take longer to review well and are more likely to hide bugs; consider splitting into smaller logical commits or stacked PRs.
+
+## Review SLA
+Reviewers are expected to provide a first pass within **1 business day** of being requested. If you can't get to a review in time, say so in the PR thread so the author can find another reviewer.
+
+## Approval Requirements
+Consistent with the branching strategy doc, standard PRs need at least 1 approval; PRs touching auth, billing, or payments need 2 approvals including one from the relevant CODEOWNERS group.
+
+## What Reviewers Should Check
+- Correctness and edge cases (including tests)
+- Readability and naming
+- Security implications, especially around user input and Confidential data handling
+- Whether the PR includes adequate test coverage — new logic generally needs at least one corresponding test
+
+## Giving Feedback
+- Distinguish blocking comments ("this will break X") from nits ("consider renaming this variable").
+- Prefix optional suggestions with "Nit:" so authors know they're not required to address them before merging.
+
+## Author Responsibilities
+Authors should write a clear PR description explaining the "why," not just the "what," and link the relevant ticket. Self-merging without any review is only allowed for documentation-only changes or emergency hotfixes explicitly approved by an EM.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: eng_deployment_release_process
+TITLE: Deployment & Release Process
+DEPARTMENT: Engineering
+DOC_TYPE: guide
+LAST_UPDATED: 2025-11-10
+ACCESS_ROLE: engineering
+---
+## Release Cadence
+Techify ships to production on a **Tuesday/Thursday release schedule**. Ad hoc releases outside this cadence require sign-off from the on-call EM and are reserved for critical fixes.
+
+## Pipeline
+All deploys run through GitHub Actions CI/CD:
+1. PR merges to `main` trigger the build and test suite.
+2. On success, the build auto-deploys to **staging**.
+3. An engineer manually promotes the staging build to **production** via the deploy bot in #eng-deploys, typically during the Tuesday/Thursday windows.
+
+## Feature Flags
+New features are typically shipped behind a LaunchDarkly feature flag and rolled out gradually (e.g., 5% → 25% → 100% of accounts) rather than enabled for all customers immediately.
+
+## Monitoring After Deploy
+The deploying engineer is responsible for watching error rates and key dashboards in Datadog for at least 30 minutes post-deploy.
+
+## Rollback
+If error rates spike more than 2x baseline after a deploy, the on-call engineer should roll back within **15 minutes** using the one-click rollback in the deploy bot, then investigate in a follow-up incident channel.
+
+## Freeze Periods
+We observe a deploy freeze during the last week of December and during major sales events (e.g., annual user conference), except for critical security patches.
+
+## On-Call Coordination
+The on-call engineer (see On-Call Rotation Policy) is paged automatically via PagerDuty if post-deploy monitoring alerts fire, and is expected to be reachable during release windows.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: eng_oncall_rotation_policy
+TITLE: On-Call Rotation Policy
+DEPARTMENT: Engineering
+DOC_TYPE: policy
+LAST_UPDATED: 2025-03-14
+ACCESS_ROLE: engineering
+---
+## Rotation Structure
+On-call responsibility rotates weekly among backend and infra engineers, managed through PagerDuty schedules. Each engineer can expect to be on-call roughly once every 6–8 weeks depending on team size.
+
+## Acknowledgment
+When paged, the on-call engineer should acknowledge the alert in PagerDuty reasonably quickly and begin triage. We generally aim for prompt acknowledgment during business hours; overnight expectations are a bit more relaxed and are ultimately up to team lead discretion.
+
+## Escalation
+If the primary on-call doesn't acknowledge in time, PagerDuty escalates to the secondary on-call, and then to the EM. Exact escalation timing can vary by team based on the PagerDuty policy configured for that service — check your team's specific escalation policy in PagerDuty rather than assuming a company-wide number.
+
+## Compensation
+Engineers on-call during a week that includes a weekend receive on-call compensation, coordinated with Finance/Payroll; see Payroll FAQ for how this appears on your paycheck.
+
+## Swapping Shifts
+Engineers can swap on-call shifts with a teammate as needed; just update the PagerDuty schedule and give a heads-up in your team's Slack channel.
+
+## Incident Response
+Declaring a formal incident (for anything customer-impacting) follows the broader incident process documented in the internal Runbooks wiki, which is outside the scope of this policy doc.
+
+## Tooling
+On-call engineers should have PagerDuty, Datadog, and the deploy bot accessible on their phone in addition to their laptop for after-hours issues.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: sales_onboarding_checklist
+TITLE: Sales New Hire Onboarding Checklist
+DEPARTMENT: Sales
+DOC_TYPE: guide
+LAST_UPDATED: 2025-08-01
+ACCESS_ROLE: sales
+---
+## Welcome to the Team!
+Whether you're joining as an SDR or an Account Executive, your first 30 days follow a structured ramp plan designed to get you productive fast.
+
+## Week 1
+- Complete IT and Okta setup (see IT Device Setup Guide)
+- Get access to Salesforce, Gong, and Outreach
+- Shadow at least 3 customer calls with a senior AE or CSM
+
+## Weeks 2–3
+- Complete Techify product certification quiz (must score 85%+ in the LMS)
+- Shadow your first live discovery call
+- Begin working assigned territory/accounts in Salesforce
+
+## Week 4
+- Lead your **first live customer call solo**, typically by day 14 for SDRs handling outbound, or by day 30 for AEs closing deals
+- Meet with your manager for a 30-day check-in and ramp assessment
+
+## Quota Ramp
+New AEs are generally given a reduced quota (ramping quota) for their first 2 full quarters before hitting full quota in quarter 3. Exact ramp percentages are set individually by Sales Leadership per role level.
+
+## Tools You'll Use
+- **Salesforce** — system of record for all deals and accounts (see CRM Usage Guide)
+- **Gong** — call recording and coaching
+- **Outreach** — sequencing and outbound cadences
+- **Slack** — #sales-wins, #sales-help, and your regional team channel
+
+## Buddy Program
+Every new sales hire is paired with a "sales buddy" from a different pod for their first 60 days, someone other than your direct manager, to ask "no dumb question is dumb" questions.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: sales_crm_usage_guide
+TITLE: CRM (Salesforce) Usage Guide
+DEPARTMENT: Sales
+DOC_TYPE: guide
+LAST_UPDATED: 2025-07-15
+ACCESS_ROLE: sales
+---
+## System of Record
+Salesforce is the single source of truth for all pipeline, accounts, and opportunity data at Techify. If it's not in Salesforce, it doesn't count for quota or commission purposes.
+
+## Opportunity Stages
+Deals move through: Prospecting → Discovery → Proposal → Negotiation → Closed Won/Closed Lost. Reps must update the opportunity stage within **24 hours** of any call or major status change.
+
+## Lead Response Time
+SDRs are expected to respond to new inbound leads within **1 business hour** during business hours, tracked via a Salesforce dashboard reviewed weekly by Sales Ops.
+
+## Required Fields
+Every opportunity must have a populated close date, deal amount, and next step before it can be marked "Commit" in forecast calls.
+
+## Forecast Calls
+AEs update forecast categories (Pipeline/Best Case/Commit/Closed) weekly ahead of the Thursday forecast call with their manager.
+
+## Data Hygiene
+Sales Ops runs a monthly data hygiene audit; reps with more than 10% of opportunities missing required fields may be flagged to their manager.
+
+## Integrations
+Salesforce is integrated with Gong (call recordings auto-attach to opportunities) and Outreach (email/call sequences sync activity back to the opportunity timeline automatically).
+
+## Support
+Questions about Salesforce fields, reports, or automation should go to #sales-ops-help; access issues should go through the standard IT access request process described in the VPN & Access Management guide.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: sales_customer_escalation_process
+TITLE: Customer Escalation Process
+DEPARTMENT: Sales
+DOC_TYPE: policy
+LAST_UPDATED: 2025-06-25
+ACCESS_ROLE: sales
+---
+## Severity Levels
+Customer issues are triaged into three severities:
+- **Sev 1 (Critical)** — production outage or major data issue affecting a customer's core workflow
+- **Sev 2 (High)** — significant bug or degraded functionality, workaround may exist
+- **Sev 3 (Normal)** — minor bugs, feature requests, general questions
+
+## Escalation SLA
+Customer Success Managers (CSMs) must escalate any Sev 1 issue to the **CSM Lead within 2 business hours** of the customer report. Sev 2 issues should be escalated within 1 business day if unresolved.
+
+## Executive Notification
+Sev 1 issues affecting a top-20 account (by ARR) trigger an automatic notification to the VP of Customer Success and the account's Account Executive, in addition to the CSM Lead.
+
+## Engineering Involvement
+If a Sev 1 is confirmed to be a product bug (not user error or config issue), the CSM Lead loops in the on-call engineer via the #eng-escalations Slack channel, referencing the On-Call Rotation Policy for who's currently on-call.
+
+## Communication Cadence
+For open Sev 1 issues, the assigned CSM must send the customer a status update at least every 2 hours until resolution or a clear ETA is established.
+
+## Post-Incident
+After any Sev 1, the CSM completes a brief internal write-up within 3 business days, and Engineering completes a postmortem per the incident process referenced in the On-Call Rotation Policy.
+
+## Escalation Outside Business Hours
+After-hours Sev 1 issues from Enterprise-tier customers can trigger the PagerDuty on-call rotation directly via the emergency support line, bypassing the standard CSM-first flow.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: marketing_product_launch_process
+TITLE: Product Launch Process
+DEPARTMENT: Marketing
+DOC_TYPE: guide
+LAST_UPDATED: 2025-09-28
+ACCESS_ROLE: all
+---
+## Launch Tiers
+Not every feature gets the same treatment. We classify launches as:
+- **Tier 1** — major launches (new product line, major pricing change) with full GTM campaign
+- **Tier 2** — meaningful features with blog post, changelog, and sales enablement
+- **Tier 3** — minor improvements, changelog entry only
+
+## Readiness Review
+For Tier 1 and Tier 2 launches, a Launch Readiness Review is held **2 weeks before GA (general availability)**, with sign-off required from Engineering, Product, Marketing, and Sales leadership.
+
+## Roles & Responsibilities
+- **Product Manager** — owns the launch brief, feature scope, and success metrics
+- **Marketing Manager** — owns messaging, campaign assets, and press/analyst outreach for Tier 1
+- **Sales Enablement** — builds the sales deck and FAQ, delivered at least 1 week before GA
+- **Engineering** — confirms the feature is behind a flag and rollout plan (per the Deployment & Release Process) is agreed with Product
+
+## Internal Communication
+All upcoming launches are tracked on the internal roadmap (see Roadmap & Confidentiality Policy) and announced in #product-launches at least 1 week ahead of GA for internal awareness, before any external announcement.
+
+## Post-Launch
+Marketing tracks adoption metrics for 30 days post-launch and shares a recap in the monthly GTM sync. Product Managers are responsible for a lightweight retro within 2 weeks of GA for Tier 1 launches.
+
+## Embargoes
+Tier 1 launches with press or analyst briefings are under embargo until the announced GA date/time; details must not be shared externally, including on personal social media, before that time.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: marketing_roadmap_confidentiality_policy
+TITLE: Product Roadmap Access & Confidentiality Policy
+DEPARTMENT: Marketing
+DOC_TYPE: policy
+LAST_UPDATED: 2024-12-02
+ACCESS_ROLE: all
+---
+## What Is the Roadmap
+The Techify product roadmap lives in Confluence under the Product space and outlines planned features, target quarters, and strategic themes for the next 2–3 quarters.
+
+## Access
+The roadmap is classified as **Internal** data (see Data Security & Classification Policy) and is accessible to all full-time employees by default, since we believe in transparency about where the product is headed.
+
+## Confidentiality
+Roadmap contents are strictly confidential and must never be shared externally — with customers, prospects, press, or on social media — without explicit written approval from the VP of Product, since specific dates and features are subject to change and could be misleading if shared prematurely.
+
+## Sales Use
+Account Executives may reference roadmap items in customer conversations only using pre-approved "directional" language from the Sales Enablement deck, never committing to a specific date. Because roadmap access itself requires manager approval via an access request ticket, reps should confirm they have current access before referencing it in a deal.
+
+## Updates
+Product Managers are expected to keep their area of the roadmap updated at least monthly; stale items (no update in 90+ days) may be flagged by the Product Ops team.
+
+## NDA Considerations
+Customers or prospects under an active mutual NDA may occasionally be shown specific roadmap slides in a sales context, but only with sign-off from the relevant Product Manager, logged in the deal's Salesforce notes.
+
+## Questions
+Reach out to #product-roadmap-questions for clarification on what can and can't be shared in a given customer conversation.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: finance_expense_reimbursement_policy
+TITLE: Expense Reimbursement Policy
+DEPARTMENT: Finance
+DOC_TYPE: policy
+LAST_UPDATED: 2025-05-30
+ACCESS_ROLE: all
+---
+## Submission
+All business expenses should be submitted through Concur within **30 days** of the expense being incurred. Expenses submitted after 60 days may be denied at Finance's discretion.
+
+## Receipts
+Receipts (photo or PDF) are required for any expense over **$25**. Expenses without required receipts may be rejected or require additional manager justification.
+
+## Approval Chain
+Expenses route automatically to your direct manager for approval, then to Finance for final processing. Manager approval should happen within 3 business days to keep the process moving.
+
+## Reimbursement Timeline
+Once fully approved, reimbursements are processed and paid out via direct deposit within **10 business days**.
+
+## What's Reimbursable
+- Client meals (within reasonable per-person limits — see Travel & Accommodation Policy for per diem specifics)
+- Approved software/tools not available through standard IT procurement
+- Conference and training expenses pre-approved by your manager
+- Home office equipment beyond the standard IT stipend, case-by-case
+
+## What's Not Reimbursable
+- Personal entertainment unrelated to business purpose
+- Commuting costs to your regular office
+- Alcohol beyond a reasonable amount at approved client or team events (generally capped informally around 2 drinks per person, at manager discretion)
+
+## Corporate Card
+Employees with a recurring need for travel or client entertainment (primarily Sales and Executive roles) may be issued a corporate card, which still requires expense reports in Concur for reconciliation.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: finance_payroll_faq
+TITLE: Payroll FAQ
+DEPARTMENT: Finance
+DOC_TYPE: faq
+LAST_UPDATED: 2025-04-10
+ACCESS_ROLE: all
+---
+## When Do I Get Paid?
+Techify runs payroll **bi-weekly**, with pay day falling every other Friday. You can view the exact schedule for the year in Workday under Pay > Pay Calendar.
+
+## Direct Deposit
+Direct deposit is required for all US-based employees. Funds are typically available in your account within 2 business days of the pay date, depending on your bank.
+
+## Pay Stubs
+Pay stubs are available in Workday under Pay > Payslips, typically posted the day before pay day.
+
+## Tax Withholding
+You can update your W-4 withholding elections anytime in Workday under Pay > Tax Documents; changes typically take effect on the next full pay cycle, not the one currently in progress.
+
+## Commission & Bonus Payouts
+Sales commission is calculated and paid out **monthly**, typically by the second pay day of the following month, based on closed-won deals in Salesforce for the prior month (see Commission structure guidance from your Sales Ops or manager for role-specific rates).
+
+## On-Call Pay
+Engineering on-call compensation (see On-Call Rotation Policy) appears as a separate line item on the pay stub for weeks with an active on-call shift.
+
+## Paycheck Errors
+If you notice an error in your paycheck, contact payroll@techify.io within 5 business days so it can be corrected in the next cycle; urgent off-cycle corrections are handled case by case.
+
+## 401(k) & Benefits Deductions
+401(k) contribution elections and changes made in Workday typically take 1-2 pay cycles to be reflected in your paycheck deductions.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: finance_travel_accommodation_policy
+TITLE: Travel & Accommodation Policy
+DEPARTMENT: Finance
+DOC_TYPE: policy
+LAST_UPDATED: 2025-06-18
+ACCESS_ROLE: all
+---
+## Booking Travel
+All business travel (flights, hotels, rental cars) must be booked through **Concur Travel**, our approved booking tool, so trips are visible to Finance and for duty-of-care purposes.
+
+## Flights
+- Flights under 6 hours: economy class
+- Flights 6+ hours: premium economy permitted with manager approval
+- Business class requires VP-level approval regardless of flight length
+
+## Hotels
+Book hotels at or below the Concur-recommended nightly rate for the destination city where possible. Rooms above that guidance require a brief business justification note in Concur.
+
+## Per Diem
+Meals while traveling are reimbursed via a per diem of **$60/day** in the US (adjusted for higher-cost cities and international destinations per the Concur per diem table), rather than itemized receipts for every meal.
+
+## Approval
+Trips over $1,500 in estimated total cost require manager approval **before booking**; trips under that threshold can be booked directly but should still be shared with your manager.
+
+## Client Entertainment
+Client meals and entertainment follow the reimbursement rules in the Expense Reimbursement Policy, including the $25 receipt threshold.
+
+## International Travel
+Employees traveling internationally for work should notify People Ops at least 2 weeks in advance for visa, insurance, and safety-tracking purposes.
+
+## Personal Travel Combined with Business
+If you extend a business trip for personal travel, only the business-related portion of costs is reimbursable; you'll need to itemize this clearly in Concur.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: general_new_hire_faq
+TITLE: First Week New Hire FAQ
+DEPARTMENT: General
+DOC_TYPE: faq
+LAST_UPDATED: 2025-10-20
+ACCESS_ROLE: all
+---
+## What happens before Day 1?
+IT ships your laptop and provisions your accounts (email, Slack, Okta) so everything is ready before you start — see the Laptop & Device Setup Guide. Badge access to your office is also provisioned in advance for hybrid/in-office roles.
+
+## What's on my first day?
+- Company-wide orientation (led by People Ops), covering benefits, culture, and the Code of Conduct
+- 1:1 with your manager to review your 30/60/90-day plan
+- Meet your assigned onboarding buddy (a peer outside your direct reporting line)
+
+## What's in my first week?
+Most new hires complete IT setup, required compliance training in Lessonly (Code of Conduct, Data Security), and department-specific onboarding (e.g., the Sales Onboarding Checklist for new sales hires).
+
+## How does badge access work?
+Badge access is tied to your Okta identity and provisioned automatically for hybrid/in-office roles ahead of your start date. If your badge doesn't work on Day 1, visit the front desk or #it-help for a temporary badge.
+
+## When do I enroll in benefits?
+You have **30 days from your start date** to enroll in health, dental, and vision benefits in Workday; see the Benefits & Holidays FAQ for details.
+
+## Who do I ask if I have a question that isn't covered here?
+Start with your manager or onboarding buddy for anything role-specific, or #ask-peopleops for HR/benefits questions and #it-help for technical issues.
+
+## When is my first paycheck?
+Depends on when your start date falls relative to the bi-weekly payroll cycle — check the Payroll FAQ and Workday's Pay Calendar for exact dates.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: general_benefits_holidays_faq
+TITLE: Benefits Enrollment & Company Holidays FAQ
+DEPARTMENT: General
+DOC_TYPE: faq
+LAST_UPDATED: 2025-09-01
+ACCESS_ROLE: all
+---
+## Company Holidays
+Techify observes **11 paid company holidays** per year (e.g., New Year's Day, Memorial Day, Independence Day, Labor Day, Thanksgiving + the day after, and a winter break around the December holidays). The exact list is published annually in Workday under Company Resources.
+
+## Benefits Enrollment Window
+New hires have **30 days from their start date** to enroll in health, dental, and vision plans through Workday. Missing this window means waiting until the next Open Enrollment period (typically November) unless you have a qualifying life event.
+
+## Health Plans
+Techify offers 2 medical plan tiers (PPO and High-Deductible with HSA) through our benefits provider, along with standard dental and vision options.
+
+## 401(k)
+Techify offers a 401(k) plan with company match, with enrollment available anytime (not limited to the 30-day new hire window) since it's not health-plan-related.
+
+## Life Events
+Qualifying life events (marriage, birth/adoption of a child, loss of other coverage) allow benefits changes outside the standard windows; report these in Workday within 30 days of the event.
+
+## Wellness Perks
+Employees get an annual $500 wellness stipend (gym memberships, fitness classes, mental health apps) reimbursable through the standard Expense Reimbursement process.
+
+## Questions
+Benefits-specific questions go to peopleops@techify.io or #ask-peopleops; our benefits broker also holds monthly office hours announced in that channel.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: org_chart_overview
+TITLE: Org Chart & Department Overview
+DEPARTMENT: General
+DOC_TYPE: reference
+LAST_UPDATED: 2025-11-15
+ACCESS_ROLE: all
+---
+## Company Snapshot
+Techify was founded in 2016 and has grown to approximately **600 employees** across offices in San Jose (HQ), Austin, and Krakow, plus a distributed remote workforce.
+
+## Top-Level Departments
+- **Engineering** — organized into Platform, Product Engineering, and Infrastructure/SRE teams, led by the VP of Engineering
+- **Product** — Product Managers organized by product area (Core Platform, Integrations, Analytics), led by the VP of Product
+- **Design** — a centralized design team supporting Product, reporting to the VP of Product
+- **Sales** — Account Executives and SDRs organized by segment (SMB, Mid-Market, Enterprise), led by the VP of Sales
+- **Customer Success** — CSMs organized by segment mirroring Sales, led by the VP of Customer Success
+- **Marketing** — Brand, Product Marketing, and Demand Gen, led by the VP of Marketing
+- **Finance & Admin** — Accounting, FP&A, and Procurement, led by the CFO
+- **People Ops** — HR, Recruiting, and Workplace, led by the VP of People
+
+## Reporting Lines
+Individual contributors report to a Manager or Engineering Manager (EM), who reports to a Director, who reports to a VP, who reports to the CEO. Most ICs are 3–4 levels from the CEO depending on team size.
+
+## Cross-Functional Pods
+Product areas are typically staffed as small cross-functional pods (1 PM, 1 Designer, 3–6 Engineers) rather than large siloed teams, to keep decision-making fast.
+
+## Finding Team Structures
+For a directory of who's on which team, see the "Team Directory" space in Confluence, kept up to date by each department's Ops/Chief of Staff function.
+===DOC_END===
+
+===DOC_START===
+DOC_ID: org_escalation_slack_channels
+TITLE: Escalation Paths & Key Slack Channels Directory
+DEPARTMENT: General
+DOC_TYPE: reference
+LAST_UPDATED: 2025-11-20
+ACCESS_ROLE: all
+---
+## Key Slack Channels
+- **#it-help** — general IT support requests
+- **#it-security-urgent** — suspected security incidents (24-hour reporting requirement, see Data Security Policy)
+- **#ask-peopleops** — HR, benefits, and PTO questions
+- **#eng-deploys** — deployment announcements and coordination (Tuesday/Thursday releases)
+- **#eng-escalations** — where CSMs loop in on-call engineering for confirmed Sev 1 product bugs
+- **#eng-breakglass** — logging break-glass access to production customer data
+- **#sales-help** / **#sales-ops-help** — Salesforce and process questions for Sales
+- **#product-launches** — internal launch announcements, at least 1 week before GA
+- **#product-roadmap-questions** — what can/can't be shared externally from the roadmap
+
+## General Escalation Path (Engineering)
+IC Engineer → Engineering Manager → Director of Engineering → VP of Engineering → CTO. Most operational escalations (a stuck PR, a blocked deploy) should resolve at the EM level.
+
+## General Escalation Path (Customer Issues)
+CSM → CSM Lead → VP of Customer Success (for Sev 1 issues on top-20 accounts, the AE and VP of CS are also looped in automatically per the Customer Escalation Process).
+
+## General Escalation Path (People/HR)
+Employee → Manager → Director → VP of People / People Ops directly for sensitive matters (harassment, ethics concerns) that shouldn't go through a direct manager.
+
+## When in Doubt
+If you're not sure who to escalate to, posting in #ask-peopleops (for people questions) or #it-help (for anything technical) will get routed to the right person — you don't need to have the exact org chart memorized.
+===DOC_END===
+
+===QA_TESTSET_START===
+[
+  {
+    "question": "How many days of paid time off (PTO) do full-time Techify employees receive per year?",
+    "expected_answer": "18 days of PTO per calendar year, accrued monthly.",
+    "source_doc_id": "hr_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "How much notice is required for an extended leave request of 5 or more consecutive days?",
+    "expected_answer": "15 days' notice to your manager and People Ops.",
+    "source_doc_id": "hr_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "Which days are in-office under Techify's hybrid work policy?",
+    "expected_answer": "Tuesday, Wednesday, and Thursday are in-office; Monday and Friday are remote.",
+    "source_doc_id": "hr_wfh_hybrid_policy",
+    "answerable": true
+  },
+  {
+    "question": "How many times per month can an employee work remotely on a normally in-office day without formal approval?",
+    "expected_answer": "Up to 4 times per month, with advance notice to their manager via Slack.",
+    "source_doc_id": "hr_wfh_hybrid_policy",
+    "answerable": true
+  },
+  {
+    "question": "Within how many business days are Code of Conduct reports investigated?",
+    "expected_answer": "Within 5 business days of submission.",
+    "source_doc_id": "hr_code_of_conduct",
+    "answerable": true
+  },
+  {
+    "question": "How many weeks of paid parental leave does a primary caregiver receive at Techify?",
+    "expected_answer": "16 weeks of fully paid parental leave.",
+    "source_doc_id": "hr_parental_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "How many weeks of paid parental leave does a secondary caregiver receive?",
+    "expected_answer": "6 weeks of fully paid parental leave.",
+    "source_doc_id": "hr_parental_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "What is the default laptop issued to new Techify hires?",
+    "expected_answer": "A MacBook Pro (14-inch, M-series).",
+    "source_doc_id": "it_device_setup",
+    "answerable": true
+  },
+  {
+    "question": "Within how many days of a new hire's start date is initial device setup completed?",
+    "expected_answer": "Within the first 2 days.",
+    "source_doc_id": "it_device_setup",
+    "answerable": true
+  },
+  {
+    "question": "What is the minimum required password length for Techify accounts?",
+    "expected_answer": "At least 12 characters.",
+    "source_doc_id": "it_password_policy",
+    "answerable": true
+  },
+  {
+    "question": "How often must Techify employees rotate their account passwords?",
+    "expected_answer": "Every 90 days.",
+    "source_doc_id": "it_password_policy",
+    "answerable": true
+  },
+  {
+    "question": "Within how many hours must a suspected data security incident be reported to IT Security?",
+    "expected_answer": "Within 24 hours of discovery.",
+    "source_doc_id": "it_data_security_policy",
+    "answerable": true
+  },
+  {
+    "question": "How many approving reviews are required for a standard pull request at Techify, and how many for auth or billing code?",
+    "expected_answer": "At least 1 approval for standard PRs; 2 approvals (including one from the relevant CODEOWNERS group) for PRs touching authentication, billing, or payment-processing code.",
+    "source_doc_id": "eng_repo_branching_strategy",
+    "answerable": true
+  },
+  {
+    "question": "What is the recommended maximum size, in lines of diff, for a pull request at Techify?",
+    "expected_answer": "Under 400 lines of diff where possible.",
+    "source_doc_id": "eng_code_review_guidelines",
+    "answerable": true
+  },
+  {
+    "question": "On which two days of the week does Techify normally release to production?",
+    "expected_answer": "Tuesday and Thursday.",
+    "source_doc_id": "eng_deployment_release_process",
+    "answerable": true
+  },
+  {
+    "question": "If error rates spike more than 2x baseline after a deploy, how quickly should the on-call engineer roll back?",
+    "expected_answer": "Within 15 minutes, using the one-click rollback in the deploy bot.",
+    "source_doc_id": "eng_deployment_release_process",
+    "answerable": true
+  },
+  {
+    "question": "What tool is used to manage Techify's on-call rotation and paging?",
+    "expected_answer": "PagerDuty.",
+    "source_doc_id": "eng_oncall_rotation_policy",
+    "answerable": true
+  },
+  {
+    "question": "By when should a new AE lead their first live customer call solo, according to the sales onboarding checklist?",
+    "expected_answer": "Typically by day 30 for AEs closing deals (day 14 for SDRs handling outbound).",
+    "source_doc_id": "sales_onboarding_checklist",
+    "answerable": true
+  },
+  {
+    "question": "What is the required minimum quiz score for the Techify product certification during sales onboarding?",
+    "expected_answer": "85% or higher.",
+    "source_doc_id": "sales_onboarding_checklist",
+    "answerable": true
+  },
+  {
+    "question": "Within how many hours must a sales rep update a Salesforce opportunity stage after a call or major status change?",
+    "expected_answer": "Within 24 hours.",
+    "source_doc_id": "sales_crm_usage_guide",
+    "answerable": true
+  },
+  {
+    "question": "What is the SDR response time SLA for new inbound leads?",
+    "expected_answer": "1 business hour during business hours.",
+    "source_doc_id": "sales_crm_usage_guide",
+    "answerable": true
+  },
+  {
+    "question": "Within how many business hours must a CSM escalate a Sev 1 customer issue to the CSM Lead?",
+    "expected_answer": "Within 2 business hours of the customer report.",
+    "source_doc_id": "sales_customer_escalation_process",
+    "answerable": true
+  },
+  {
+    "question": "How far before general availability (GA) is the Launch Readiness Review held for Tier 1 and Tier 2 launches?",
+    "expected_answer": "2 weeks before GA.",
+    "source_doc_id": "marketing_product_launch_process",
+    "answerable": true
+  },
+  {
+    "question": "Within how many days must expenses be submitted in Concur after being incurred?",
+    "expected_answer": "Within 30 days.",
+    "source_doc_id": "finance_expense_reimbursement_policy",
+    "answerable": true
+  },
+  {
+    "question": "Above what dollar amount is a receipt required for an expense at Techify?",
+    "expected_answer": "Over $25.",
+    "source_doc_id": "finance_expense_reimbursement_policy",
+    "answerable": true
+  },
+  {
+    "question": "How often does Techify run payroll, and on what day does pay land?",
+    "expected_answer": "Bi-weekly, with pay day every other Friday.",
+    "source_doc_id": "finance_payroll_faq",
+    "answerable": true
+  },
+  {
+    "question": "What is Techify's daily meal per diem for domestic business travel?",
+    "expected_answer": "$60 per day in the US.",
+    "source_doc_id": "finance_travel_accommodation_policy",
+    "answerable": true
+  },
+  {
+    "question": "Above what estimated total trip cost does business travel require manager approval before booking?",
+    "expected_answer": "Trips over $1,500 in estimated total cost.",
+    "source_doc_id": "finance_travel_accommodation_policy",
+    "answerable": true
+  },
+  {
+    "question": "How many paid company holidays does Techify observe per year?",
+    "expected_answer": "11 paid company holidays.",
+    "source_doc_id": "general_benefits_holidays_faq",
+    "answerable": true
+  },
+  {
+    "question": "In what year was Techify founded, and roughly how many employees does it have?",
+    "expected_answer": "Founded in 2016, with approximately 600 employees.",
+    "source_doc_id": "org_chart_overview",
+    "answerable": true
+  },
+  {
+    "question": "Which CRM do new sales hires use, and within how many hours must they log an opportunity update after a call?",
+    "expected_answer": "Salesforce is the CRM; opportunity stages must be updated within 24 hours of a call or major status change.",
+    "source_doc_id": "sales_onboarding_checklist,sales_crm_usage_guide",
+    "answerable": true
+  },
+  {
+    "question": "Which tool pages the on-call engineer during a Tuesday or Thursday production release if monitoring alerts fire?",
+    "expected_answer": "PagerDuty, per the on-call rotation used during the release process.",
+    "source_doc_id": "eng_deployment_release_process,eng_oncall_rotation_policy",
+    "answerable": true
+  },
+  {
+    "question": "Which tool should an employee use to book a client-visit trip, and within how many business days will their travel expenses be reimbursed once approved?",
+    "expected_answer": "Concur Travel for booking; expenses are reimbursed within 10 business days of full approval.",
+    "source_doc_id": "finance_travel_accommodation_policy,finance_expense_reimbursement_policy",
+    "answerable": true
+  },
+  {
+    "question": "Combining paid holidays and annual PTO, how many total paid days off does a Techify employee get in a year (excluding sick leave)?",
+    "expected_answer": "29 days total: 11 paid company holidays plus 18 days of PTO.",
+    "source_doc_id": "general_benefits_holidays_faq,hr_leave_policy",
+    "answerable": true
+  },
+  {
+    "question": "What is Techify's current stock ticker symbol?",
+    "expected_answer": "Not answerable from provided documents",
+    "source_doc_id": "",
+    "answerable": false
+  },
+  {
+    "question": "How many paid vacation days do part-time contractors receive at Techify?",
+    "expected_answer": "Not answerable from provided documents",
+    "source_doc_id": "",
+    "answerable": false
+  },
+  {
+    "question": "Who is Techify's current CEO?",
+    "expected_answer": "Not answerable from provided documents",
+    "source_doc_id": "",
+    "answerable": false
+  },
+  {
+    "question": "What is the exact dollar amount of Techify's employee referral bonus?",
+    "expected_answer": "Not answerable from provided documents",
+    "source_doc_id": "",
+    "answerable": false
+  }
+]
+===QA_TESTSET_END===
