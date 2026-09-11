@@ -1,19 +1,17 @@
 """
 generator.py
 
-Full RAG pipeline: hybrid retrieval (dense + BM25) -> cross-encoder
-reranking -> confidence check -> grounded generation via local Ollama.
+Full RAG pipeline: hybrid retrieval (dense + BM25, role-filtered) ->
+cross-encoder reranking -> confidence check -> grounded generation via
+local Ollama.
 
 Pipeline stages:
-1. hybrid_retrieve() pulls a broad candidate set (top-20) combining
-   semantic and keyword search.
-2. rerank() re-scores those candidates with a cross-encoder for much
-   more accurate relevance judgments, narrowing to the final top-k.
-3. If the top reranked score is below CONFIDENCE_THRESHOLD, we skip
-   generation and return a canned "not found" response. Rerank scores
-   are far better separated than raw dense/RRF scores (~0.85-0.98 for
-   genuine matches vs. near-zero for irrelevant ones), so this check
-   is now meaningfully more reliable than the old dense-score threshold.
+1. hybrid_retrieve() pulls a broad candidate set (top-20), restricted
+   to documents the given user_role is allowed to see (role_filter.py).
+2. rerank() re-scores those candidates with a cross-encoder, narrowing
+   to the final top-k.
+3. If the top reranked score is below CONFIDENCE_THRESHOLD, generation
+   is skipped and a canned "not found" response is returned.
 4. The LLM is still explicitly instructed to say "I don't know" if the
    provided context doesn't answer the question, as a second layer of
    defense beyond the score-based check.
@@ -27,13 +25,12 @@ from ..retrieval.reranker import rerank
 OLLAMA_URL = "http://localhost:11434/api/generate"
 GENERATION_MODEL = "llama3.1:8b"
 
-HYBRID_CANDIDATES = 20   # broad candidate pool from hybrid retrieval
-FINAL_TOP_K = 5          # final chunk count after reranking
-CONFIDENCE_THRESHOLD = 0.4  # rerank_score below this = treat as "no real match"
-# NOTE: this threshold is a reasonable starting point based on manual testing
-# (genuine matches scored 0.86-0.98, tangential ones 0.01-0.25). It should be
-# tuned properly once the eval harness runs against qa_testset.json's
-# unanswerable questions.
+HYBRID_CANDIDATES = 20
+FINAL_TOP_K = 5
+CONFIDENCE_THRESHOLD = 0.4
+# See earlier calibration notes: genuine matches scored 0.86-0.98,
+# tangential/irrelevant ones 0.01-0.25 in manual testing. To be tuned
+# properly once the eval harness runs against qa_testset.json.
 
 SYSTEM_PROMPT = """You are Wayfinder, an onboarding assistant for Techify employees.
 
@@ -84,15 +81,18 @@ def call_llm(prompt: str) -> str:
     return response.json()["response"].strip()
 
 
-def answer_query(query: str, access_role: str | None = None) -> dict:
+def answer_query(query: str, user_role: str | None = None) -> dict:
     """
-    Full RAG pipeline: hybrid retrieve -> rerank -> confidence check -> generate.
-    Returns a dict with the answer, whether it was grounded, sources, and the
-    top rerank score (useful for debugging/eval).
+    Full RAG pipeline: hybrid retrieve (role-filtered) -> rerank ->
+    confidence check -> generate.
+
+    user_role: the employee's role (e.g. "engineering", "sales",
+    "finance", "manager"). If None, no access restriction is applied
+    (full-corpus access — intended for eval/testing, not real usage).
     """
     _ensure_bm25_ready()
 
-    candidates = hybrid_retrieve(query, top_k=HYBRID_CANDIDATES, access_role=access_role)
+    candidates = hybrid_retrieve(query, top_k=HYBRID_CANDIDATES, user_role=user_role)
     reranked_chunks = rerank(query, candidates, top_k=FINAL_TOP_K)
 
     if not reranked_chunks or reranked_chunks[0]["rerank_score"] < CONFIDENCE_THRESHOLD:
@@ -119,17 +119,14 @@ def answer_query(query: str, access_role: str | None = None) -> dict:
 
 
 if __name__ == "__main__":
-    test_queries = [
-        "How many days of paid time off do I get?",
-        "1Password setup",
-        "GlobalProtect VPN",
-        "What's the process for expense reimbursement?",
-        "What is Techify's stock price?",
-    ]
+    # Demonstrate access control end-to-end: an engineering-specific
+    # question, asked as an engineer vs. as a salesperson.
+    query = "What's the on-call rotation policy?"
 
-    for q in test_queries:
-        result = answer_query(q)
-        print(f"\nQ: {q}")
+    for role in ["engineering", "sales"]:
+        result = answer_query(query, user_role=role)
+        print(f"\nRole: {role}")
+        print(f"Q: {query}")
         print(f"Top rerank score: {result['top_score']}")
         print(f"Answer: {result['answer']}")
         if result["sources"]:

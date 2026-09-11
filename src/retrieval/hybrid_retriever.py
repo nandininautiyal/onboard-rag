@@ -4,15 +4,11 @@ hybrid_retriever.py
 Combines dense (semantic) retrieval from Qdrant with sparse (keyword)
 retrieval via BM25, merging results using Reciprocal Rank Fusion (RRF).
 
-Why this matters: pure dense/semantic search can miss exact-term queries
-(tool names, acronyms, specific phrases like "1Password" or "GlobalProtect")
-that BM25 keyword matching catches easily. Combining both gives more robust
-retrieval than either alone.
-
-RRF is used to merge the two ranked lists because it doesn't require the
-two methods' raw scores to be on the same scale (cosine similarity vs.
-BM25 scores are not directly comparable) — it only uses each result's
-*rank position* in its own list.
+Also applies role-based access filtering: given a user_role (e.g.
+"sales", "engineering"), only chunks tagged "all" or matching that
+role's allowed access tags (see src/access_control/role_filter.py)
+are retrieved at all — restricted content never even reaches the
+candidate pool, let alone the LLM.
 """
 
 import hashlib
@@ -22,21 +18,18 @@ from qdrant_client.models import Filter, FieldCondition, MatchValue
 
 from ..ingestion.loaders import load_documents
 from ..ingestion.chunker import chunk_all_documents
+from ..access_control.role_filter import get_allowed_access_roles
 from .retriever import get_model, get_client, COLLECTION_NAME
 
-RRF_K = 60  # standard smoothing constant for Reciprocal Rank Fusion
+RRF_K = 60
 DENSE_CANDIDATES = 20
 BM25_CANDIDATES = 20
 
 _bm25_index = None
-_bm25_chunks = None  # list of chunk dicts, aligned with the BM25 corpus order
+_bm25_chunks = None
 
 
 def _chunk_key(text: str) -> str:
-    """Stable identifier for a chunk based on its text content, used to
-    match the same chunk across dense and BM25 result sets (their
-    randomly-generated chunk_ids differ across separate chunking runs,
-    but the underlying text is identical since chunking is deterministic)."""
     return hashlib.md5(text.encode("utf-8")).hexdigest()
 
 
@@ -45,8 +38,6 @@ def _tokenize(text: str) -> list[str]:
 
 
 def build_bm25_index():
-    """Builds the in-memory BM25 index over all chunks. Cached at module
-    level so it's only built once per process."""
     global _bm25_index, _bm25_chunks
 
     documents = load_documents()
@@ -73,29 +64,34 @@ def build_bm25_index():
     print(f"Built BM25 index over {len(_bm25_chunks)} chunks")
 
 
-def bm25_search(query: str, top_n: int = BM25_CANDIDATES) -> list[dict]:
+def bm25_search(query: str, top_n: int = BM25_CANDIDATES, allowed_roles: set[str] | None = None) -> list[dict]:
     if _bm25_index is None:
         build_bm25_index()
 
     tokenized_query = _tokenize(query)
     scores = _bm25_index.get_scores(tokenized_query)
 
-    ranked = sorted(zip(_bm25_chunks, scores), key=lambda x: x[1], reverse=True)[:top_n]
+    scored_chunks = list(zip(_bm25_chunks, scores))
+
+    if allowed_roles is not None:
+        scored_chunks = [(c, s) for c, s in scored_chunks if c["access_role"] in allowed_roles]
+
+    ranked = sorted(scored_chunks, key=lambda x: x[1], reverse=True)[:top_n]
     return [{**chunk, "bm25_score": float(score)} for chunk, score in ranked]
 
 
-def dense_search(query: str, top_n: int = DENSE_CANDIDATES, access_role: str | None = None) -> list[dict]:
+def dense_search(query: str, top_n: int = DENSE_CANDIDATES, allowed_roles: set[str] | None = None) -> list[dict]:
     model = get_model()
     client = get_client()
 
     query_vector = model.encode(query, normalize_embeddings=True).tolist()
 
     query_filter = None
-    if access_role:
+    if allowed_roles is not None:
         query_filter = Filter(
             should=[
-                FieldCondition(key="access_role", match=MatchValue(value="all")),
-                FieldCondition(key="access_role", match=MatchValue(value=access_role)),
+                FieldCondition(key="access_role", match=MatchValue(value=role))
+                for role in allowed_roles
             ]
         )
 
@@ -127,10 +123,6 @@ def dense_search(query: str, top_n: int = DENSE_CANDIDATES, access_role: str | N
 
 
 def reciprocal_rank_fusion(dense_results: list[dict], bm25_results: list[dict], k: int = RRF_K) -> list[dict]:
-    """
-    score(chunk) = sum over each list it appears in of 1 / (k + rank)
-    Chunks appearing near the top of either (or both) lists score highest.
-    """
     scores = {}
     chunk_lookup = {}
 
@@ -149,12 +141,17 @@ def reciprocal_rank_fusion(dense_results: list[dict], bm25_results: list[dict], 
     return [{**chunk_lookup[key], "rrf_score": score} for key, score in merged]
 
 
-def hybrid_retrieve(query: str, top_k: int = 5, access_role: str | None = None) -> list[dict]:
-    dense_results = dense_search(query, top_n=DENSE_CANDIDATES, access_role=access_role)
-    bm25_results = bm25_search(query, top_n=BM25_CANDIDATES)
+def hybrid_retrieve(query: str, top_k: int = 5, user_role: str | None = None) -> list[dict]:
+    """
+    user_role: an employee role (e.g. "engineering", "sales", "manager").
+    If provided, retrieval is restricted to chunks tagged "all" or
+    matching that role's allowed access tags. If None, no restriction
+    is applied (full-corpus access — used for eval/testing).
+    """
+    allowed_roles = get_allowed_access_roles(user_role)
 
-    if access_role:
-        bm25_results = [c for c in bm25_results if c["access_role"] in ("all", access_role)]
+    dense_results = dense_search(query, top_n=DENSE_CANDIDATES, allowed_roles=allowed_roles)
+    bm25_results = bm25_search(query, top_n=BM25_CANDIDATES, allowed_roles=allowed_roles)
 
     merged = reciprocal_rank_fusion(dense_results, bm25_results)
     return merged[:top_k]
@@ -163,23 +160,23 @@ def hybrid_retrieve(query: str, top_k: int = 5, access_role: str | None = None) 
 def print_results(query: str, results: list[dict]):
     print(f"\nQuery: '{query}'")
     print("-" * 60)
+    if not results:
+        print("  (no results — likely filtered out by access role)")
+        return
     for i, r in enumerate(results, 1):
         print(f"\n[{i}] rrf_score={r['rrf_score']:.4f} | {r['title']} > {r['section_heading']}")
-        print(f"    (doc_id: {r['doc_id']}, department: {r['department']})")
+        print(f"    (doc_id: {r['doc_id']}, access_role: {r['access_role']})")
         print(f"    {r['text'][:200]}...")
 
 
 if __name__ == "__main__":
     build_bm25_index()
 
-    test_queries = [
-        "How many days of paid time off do I get?",
-        "1Password setup",
-        "GlobalProtect VPN",
-        "What is Techify's stock price?",
-    ]
+    # Demonstrate access control: an engineering-specific query, asked
+    # as different roles, should return different (or no) results.
+    query = "What's the on-call rotation policy?"
 
-    for q in test_queries:
-        results = hybrid_retrieve(q, top_k=3)
-        print_results(q, results)
-        print("\n" + "=" * 60)
+    for role in [None, "engineering", "sales"]:
+        print(f"\n{'='*60}\nAsking as role: {role}\n{'='*60}")
+        results = hybrid_retrieve(query, top_k=3, user_role=role)
+        print_results(query, results)
