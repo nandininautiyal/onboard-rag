@@ -2,28 +2,41 @@
 generator.py
 
 Full RAG pipeline: hybrid retrieval (dense + BM25, role-filtered) ->
-cross-encoder reranking -> confidence check -> grounded generation via
-local Ollama.
+cross-encoder reranking -> confidence check -> grounded generation.
 
-Pipeline stages:
-1. hybrid_retrieve() pulls a broad candidate set (top-20), restricted
-   to documents the given user_role is allowed to see (role_filter.py).
-2. rerank() re-scores those candidates with a cross-encoder, narrowing
-   to the final top-k.
-3. If the top reranked score is below CONFIDENCE_THRESHOLD, generation
-   is skipped and a canned "not found" response is returned.
-4. The LLM is still explicitly instructed to say "I don't know" if the
-   provided context doesn't answer the question, as a second layer of
-   defense beyond the score-based check.
+Generation backend is controlled by the GENERATION_BACKEND environment
+variable:
+    - "ollama" (default): free, local inference via Ollama. Used for
+      local development — no API costs, no internet dependency.
+    - "groq": free-tier hosted inference via Groq's API. Used for the
+      publicly deployed version (e.g. on Hugging Face Spaces), since
+      a deployed environment can't run a local Ollama server.
+
+This isolation means switching environments is a one-line .env change,
+not a code change — call_llm() is the only place backend-specific logic
+lives; everything else in the pipeline is backend-agnostic.
 """
 
+import os
+
 import requests
+from dotenv import load_dotenv
 
 from ..retrieval.hybrid_retriever import hybrid_retrieve, build_bm25_index
 from ..retrieval.reranker import rerank
 
+load_dotenv()
+
+GENERATION_BACKEND = os.getenv("GENERATION_BACKEND", "ollama").lower()
+
+# --- Ollama (local) config ---
 OLLAMA_URL = "http://localhost:11434/api/generate"
-GENERATION_MODEL = "llama3.1:8b"
+OLLAMA_MODEL = "llama3.1:8b"
+
+# --- Groq (hosted) config ---
+GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
+GROQ_MODEL = "llama-3.1-8b-instant"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 HYBRID_CANDIDATES = 20
 FINAL_TOP_K = 5
@@ -65,30 +78,48 @@ def format_context(chunks: list[dict]) -> str:
     return "\n\n".join(blocks)
 
 
-def call_llm(prompt: str) -> str:
+def _call_ollama(prompt: str) -> str:
     full_prompt = f"{SYSTEM_PROMPT}\n\n{prompt}"
-
     response = requests.post(
         OLLAMA_URL,
-        json={
-            "model": GENERATION_MODEL,
-            "prompt": full_prompt,
-            "stream": False,
-        },
+        json={"model": OLLAMA_MODEL, "prompt": full_prompt, "stream": False},
         timeout=120,
     )
     response.raise_for_status()
     return response.json()["response"].strip()
 
 
+def _call_groq(prompt: str) -> str:
+    if not GROQ_API_KEY:
+        raise RuntimeError("GROQ_API_KEY is not set in .env, but GENERATION_BACKEND=groq")
+
+    response = requests.post(
+        GROQ_URL,
+        headers={"Authorization": f"Bearer {GROQ_API_KEY}"},
+        json={
+            "model": GROQ_MODEL,
+            "messages": [
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": prompt},
+            ],
+            "max_tokens": 500,
+        },
+        timeout=60,
+    )
+    response.raise_for_status()
+    return response.json()["choices"][0]["message"]["content"].strip()
+
+
+def call_llm(prompt: str) -> str:
+    if GENERATION_BACKEND == "groq":
+        return _call_groq(prompt)
+    return _call_ollama(prompt)
+
+
 def answer_query(query: str, user_role: str | None = None) -> dict:
     """
     Full RAG pipeline: hybrid retrieve (role-filtered) -> rerank ->
     confidence check -> generate.
-
-    user_role: the employee's role (e.g. "engineering", "sales",
-    "finance", "manager"). If None, no access restriction is applied
-    (full-corpus access — intended for eval/testing, not real usage).
     """
     _ensure_bm25_ready()
 
@@ -119,14 +150,16 @@ def answer_query(query: str, user_role: str | None = None) -> dict:
 
 
 if __name__ == "__main__":
-    # Demonstrate access control end-to-end: an engineering-specific
-    # question, asked as an engineer vs. as a salesperson.
-    query = "What's the on-call rotation policy?"
+    print(f"Using generation backend: {GENERATION_BACKEND}")
 
-    for role in ["engineering", "sales"]:
-        result = answer_query(query, user_role=role)
-        print(f"\nRole: {role}")
-        print(f"Q: {query}")
+    test_queries = [
+        "How many days of paid time off do I get?",
+        "What is Techify's stock price?",
+    ]
+
+    for q in test_queries:
+        result = answer_query(q)
+        print(f"\nQ: {q}")
         print(f"Top rerank score: {result['top_score']}")
         print(f"Answer: {result['answer']}")
         if result["sources"]:
